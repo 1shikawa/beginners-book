@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title></head>
+<body>
+
+<header>Taro's Profile</header>
+
+<nav>
+    <a href="{% url 'myprofile:top' %}">TOP</a>
+    <a href="{% url 'myprofile:resume' %}">Resume</a>
+    <a href="{% url 'diaries:top' %}">diaries</a>
+    <a href="{% url 'reviews:review_list' %}">reviews</a>
+    <a href="{% url 'contact:top' %}">contact</a>
+    <a href="{% url 'videos:video_list' %}">videos</a>
+    <a href="{% url 'blog:post_list' %}">blog</a>
+    <a href="http://localhost:8888/admin/">admin</a>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
